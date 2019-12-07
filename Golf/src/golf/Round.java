@@ -54,7 +54,7 @@ public class Round {
 
 	        while (run){
 	            try {
-	            	System.out.print("Enter the score for player " + golfers[i].getName() + ": ");
+	            	System.out.print("Enter the score for hole " + Integer.toString(onHole + 1) + " for player " + golfers[i].getName() + " from " + golfers[i].getClub() +": ");
 	            	String input = sc.next();
 	                s = Integer.parseInt(input);
 	                
