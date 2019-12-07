@@ -12,7 +12,7 @@ public class Golfer {
     int[] hol = new int[18];
    
     /*
-     * Created by Krisse
+     * Created by Kristina Causton
      */
     public void addNamnAndClub(String player) {	//Sparar namnet ot spelarna och klubben
         System.out.println("What's player" + player + "s name?");
