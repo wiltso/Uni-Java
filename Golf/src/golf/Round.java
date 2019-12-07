@@ -24,7 +24,7 @@ public class Round {
 	 * Created by krisse
 	 */
 	public void next() {
-        while (onHole < 19) {
+        while (onHole < 18) {
         	if (onHole == 0){
         		System.out.println("Press enter to start the game: ");
         		Scanner sc = new Scanner (System.in);
@@ -112,8 +112,8 @@ public class Round {
     	
     	List<Map.Entry<Integer, Integer> > playerList = sortByValue(unsortedPlayers);    	
     	
-        for (Map.Entry<Integer, Integer> a : playerList) { 
-        	System.out.println(golfers[a.getKey()].getGolfersScore()); 
+        for (Map.Entry<Integer, Integer> a : playerList) {
+        	System.out.println("The " + golfers[a.getKey()].scoreWithName()); 
         }
     }
     
@@ -130,7 +130,7 @@ public class Round {
         }
 
         for (Map.Entry<Integer, Integer> a : playerList) { 
-        	System.out.println(golfers[a.getKey()].getGolfersScore()); 
+        	System.out.println("The end " + golfers[a.getKey()].scoreWithName()); 
         }
         
     }

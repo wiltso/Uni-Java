@@ -49,7 +49,7 @@ public class Golfer {
     		}
 		}
     	s = s.substring(0, s.length()-2);
-    	s = s + " total score for " + name + " is " + Integer.toString(totalScore());
+    	s = s + " total score for " + name + " from " + club + " is: " + Integer.toString(totalScore());
     	return s;
     }
     public int totalScore() {
@@ -62,6 +62,9 @@ public class Golfer {
     		}
 		}
     	return score;
+    }
+    public String scoreWithName() {
+    	return "score for " + name + " from " + club + " is: " + Integer.toString(totalScore());
     }
     
 }
