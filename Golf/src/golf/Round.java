@@ -9,7 +9,7 @@ public class Round {
 	
 	int onHole = 0;
 	/*
-	 * Created by krisse
+	 * Created by Kristina Causton
 	 */
 	public void initializeGame() {
 		
@@ -21,7 +21,7 @@ public class Round {
         next();
     }
 	/*
-	 * Created by krisse
+	 * Created by Kristina Causton
 	 */
 	public void next() {
         while (onHole < 18) {
@@ -45,11 +45,12 @@ public class Round {
 			    System.out.println("Please answer either M to get Mellanresultat or N for Next round");
 			}
 		}
-        printScore();
+        printFinalScore();
+        
     }
 	
 	/*
-	 * Created by krisse
+	 * Created by Kristina Causton
 	 */
     public void addSlag() {
     	for(int i = 0; i < golfers.length; i++) {

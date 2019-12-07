@@ -12,7 +12,7 @@ public class Golfer {
     int[] hol = new int[18];
    
     /*
-     * Created by Krisse
+     * Created by Kristina Causton
      */
     public void addNamn() {                    //Sparar namnet ot spelarna
         System.out.println("What is your name? ");
@@ -20,7 +20,7 @@ public class Golfer {
         name = sc.next();
     }
     /*
-     * Created by Krisse
+     * Created by Kristina Causton
      */
     public void addKlubb() {                // Ge golfern en klubb
         System.out.println("What is the name of your Club? ");
