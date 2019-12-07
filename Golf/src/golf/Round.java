@@ -25,21 +25,26 @@ public class Round {
 	 */
 	public void next() {
         while (onHole < 19) {
-            System.out.println("What would you like to do next?\nType M to get Mellanresultat or N for Next round? ");
+        	if (onHole == 0){
+        		System.out.println("Press enter to start the game: ");
+        		Scanner sc = new Scanner (System.in);
+                String s = sc.nextLine();
+        		addSlag();
+			}	
+        	System.out.println("What would you like to do next?\nType M to get Mellanresultat or N for Next round? ");
             Scanner sc = new Scanner (System.in);
             String s1 = sc.next();
-            if (onHole > 1) {
-                if (s1.equalsIgnoreCase("n")||s1.equalsIgnoreCase("next")||s1.equalsIgnoreCase("next round")) {
-                    addSlag();
-                }
-                else if(s1.equalsIgnoreCase("m")||s1.equalsIgnoreCase("mellanresultat")) {
-                    printScore();
-                }
-                else {
-                    System.out.println("Please answer either M to get Mellanresultat or N for Next round");
-                }
-            }
-        }
+			
+            if (s1.equalsIgnoreCase("n")||s1.equalsIgnoreCase("next")||s1.equalsIgnoreCase("next round")) {
+			    addSlag();
+			}
+			else if(s1.equalsIgnoreCase("m")||s1.equalsIgnoreCase("mellanresultat")) {
+			    printScore();
+			}
+			else {
+			    System.out.println("Please answer either M to get Mellanresultat or N for Next round");
+			}
+		}
         printScore();
     }
 	
