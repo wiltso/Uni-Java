@@ -28,16 +28,16 @@ public class Round {
             System.out.println("What would you like to do next?\nType M to get Mellanresultat or N for Next round? ");
             Scanner sc = new Scanner (System.in);
             String s1 = sc.next();
-            String s2 = "n";
-            String s3 = "m";
-            if (s1.equalsIgnoreCase(s2)) {
-                addSlag();
-            }
-            else if(s1.equalsIgnoreCase(s3)) {
-                printScore();
-            }
-            else {
-                System.out.println("Please type (N) or (M)");
+            if (onHole > 1) {
+                if (s1.equalsIgnoreCase("n")||s1.equalsIgnoreCase("next")||s1.equalsIgnoreCase("next round")) {
+                    addSlag();
+                }
+                else if(s1.equalsIgnoreCase("m")||s1.equalsIgnoreCase("mellanresultat")) {
+                    printScore();
+                }
+                else {
+                    System.out.println("Please answer either M to get Mellanresultat or N for Next round");
+                }
             }
         }
         printScore();
