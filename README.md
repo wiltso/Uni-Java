@@ -13,4 +13,9 @@ Then it will tell you that you need to type git push --set-upstream....
 
 Then go to github and to this reposotory and click compare & pull request
 
-add me ass a rewier and click creat request
+add me as a rewier and click creat request
+
+```
+git checkout master
+git pull
+```
