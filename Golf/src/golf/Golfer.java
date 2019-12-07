@@ -14,17 +14,11 @@ public class Golfer {
     /*
      * Created by Krisse
      */
-    public void addNamn() {                    //Sparar namnet ot spelarna
-        System.out.println("What is your name? ");
+    public void addNamnAndClub(String player) {	//Sparar namnet ot spelarna och klubben
+        System.out.println("What's player" + player + "s name?");
         Scanner sc = new Scanner(System.in);
         name = sc.next();
-    }
-    /*
-     * Created by Krisse
-     */
-    public void addKlubb() {                // Ge golfern en klubb
-        System.out.println("What is the name of your Club? ");
-        Scanner sc = new Scanner (System.in);
+        System.out.println("What is the name of "  + name + "s Club? ");
         club = sc.next();
     }
 
@@ -48,9 +42,7 @@ public class Golfer {
     			s = s + Integer.toString(hol[i]) + ", ";
     		}
 		}
-    	s = s.substring(0, s.length()-2);
-    	s = s + " total score for " + name + " from " + club + " is: " + Integer.toString(totalScore());
-    	return s;
+    	return name + "s score for the game is: " + s.substring(0, s.length()-2) ;
     }
     public int totalScore() {
     	int score = 0;
@@ -63,8 +55,11 @@ public class Golfer {
 		}
     	return score;
     }
-    public String scoreWithName() {
-    	return "score for " + name + " from " + club + " is: " + Integer.toString(totalScore());
+    public String endScoreWithName() {
+    	return name + " from " + club + " with: " + Integer.toString(totalScore());
+    }
+    public String middleScoreWithName() {
+    	return "The score for " + name + " from " + club + " is: " + Integer.toString(totalScore());
     }
     
 }

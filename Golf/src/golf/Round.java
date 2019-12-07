@@ -15,8 +15,7 @@ public class Round {
 		
         for (int i=0; i < golfers.length; i++) {
         	golfers[i] = new Golfer();
-        	golfers[i].addNamn();
-            golfers[i].addKlubb();
+        	golfers[i].addNamnAndClub(Integer.toString(i+1));
         }
         next();
     }
@@ -26,9 +25,6 @@ public class Round {
 	public void next() {
         while (onHole < 18) {
         	if (onHole == 0){
-        		System.out.println("Press enter to start the game: ");
-        		Scanner sc = new Scanner (System.in);
-                String s = sc.nextLine();
         		addSlag();
 			}	
         	System.out.println("What would you like to do next?\nType M to get Mellanresultat or N for Next round? ");
@@ -45,7 +41,7 @@ public class Round {
 			    System.out.println("Please answer either M to get Mellanresultat or N for Next round");
 			}
 		}
-        printScore();
+        printFinalScore();
     }
 	
 	/*
@@ -113,10 +109,14 @@ public class Round {
     	List<Map.Entry<Integer, Integer> > playerList = sortByValue(unsortedPlayers);    	
     	
         for (Map.Entry<Integer, Integer> a : playerList) {
-        	System.out.println("The " + golfers[a.getKey()].scoreWithName()); 
+        	System.out.println(golfers[a.getKey()].middleScoreWithName()); 
         }
     }
-    
+
+    /*
+     * Prints the final score and who won
+     * Created by William Lindholm
+     */
     public void printFinalScore() {
     	HashMap<Integer, Integer> unsortedPlayers = new HashMap<Integer, Integer>();
     	for(int i = 0; i < golfers.length; i++) {
@@ -128,9 +128,12 @@ public class Round {
         for (Map.Entry<Integer, Integer> a : playerList) { 
         	System.out.println(golfers[a.getKey()].getGolfersScore()); 
         }
-
+        String[] place = {"First place gose to ", "Second place gose to ", "Third place gose to ", "Fourth place gose to "};
+        int onPlace = 0;
+        
         for (Map.Entry<Integer, Integer> a : playerList) { 
-        	System.out.println("The end " + golfers[a.getKey()].scoreWithName()); 
+        	System.out.println(place[onPlace] + golfers[a.getKey()].endScoreWithName());
+        	onPlace = onPlace + 1;
         }
         
     }
