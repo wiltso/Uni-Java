@@ -128,7 +128,7 @@ public class Round {
         for (Map.Entry<Integer, Integer> a : playerList) { 
         	System.out.println(golfers[a.getKey()].getGolfersScore()); 
         }
-        String[] place = {"First place gose to ", "Second place gose to ", "Third place gose to ", "Fourth place gose to "};
+        String[] place = {"First place goes to ", "Second place goes to ", "Third place goes to ", "Fourth place goes to "};
         int onPlace = 0;
         
         for (Map.Entry<Integer, Integer> a : playerList) { 
