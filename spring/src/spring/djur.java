@@ -7,5 +7,8 @@ public class djur {
 	static int minSpeed;
 	static float eat;
 
-	
+	public void initilize() {
+		
+		
+	}
 }
