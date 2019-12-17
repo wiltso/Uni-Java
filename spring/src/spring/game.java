@@ -15,7 +15,7 @@ public class game {
 		String[] names = {"Lion", "Panther", "Hippo", "Cat", "Dog"};
 		int[] maxspeed = {45, 53, 37, 39, 41};	//tas * 0,1 for att bli ratt
 		int[] minspeed = {35, 37, 33, 33, 35};
-		double[] eatchance = { 0.13 , 0.23 , 0.02 , 0.03 , 0.09 };
+		int[] eatchance = { 13 , 23 , 2 , 3 , 9 };
 		
 		for (int i = 0; i < djuren.length; i++) {
 			System.out.println(names[i]);
