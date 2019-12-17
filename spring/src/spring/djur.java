@@ -26,7 +26,7 @@ public class djur {
 		}
 	}
 	public boolean won() {
-		return runningTotal > 1000;
+		return runningTotal >= 1000;
 	}
 
 	public void reset() {

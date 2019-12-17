@@ -3,12 +3,14 @@ package spring;
 public class game {
 	
 	djur[] djuren = new djur[4];
+	String format = "%1$-10s";
 	
 	public void runGame() {
 		// TODO Auto-generated method stub
 		initilize();
 		boolean won = false;
-		while (won) {
+		while (won == false) {
+			System.out.println("hubaluba");
 			won = run();
 		}
 		reset();
@@ -25,7 +27,9 @@ public class game {
 			djuren[i].initilize(names[i], maxspeed[i], minspeed[i], eatchance[i]);
 		}
 		
-		for (djur djuret:djuren) {	
+		for (djur djuret:djuren) {	//för alla djuren
+			djuret.getTheName();	//hämtar djurets namn med The
+			
 		}
 	}
 	
@@ -33,7 +37,7 @@ public class game {
 		boolean someOneWon = false;
 		for (djur djuret: djuren) {
 			double runningTotal = djuret.run();
-			System.out.println(runningTotal);
+			System.out.format(format, runningTotal);
 			if (someOneWon != true){
 				someOneWon = djuret.won();
 			}
