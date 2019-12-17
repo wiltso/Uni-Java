@@ -10,10 +10,10 @@ public class djur {
 	private double runningTotal = 0;
 	private static int eat;
 
-	public void initilize(String name, int maxspeed, int minspeed, double eatChance) {
+	public void initilize(String name, int maxspeed, int minspeed, int eatChance) {
 		System.out.println(eatChance);
 		djurName = name;
-		eat = (int) (eatChance * 100);
+		eat = eatChance;
 		
 	}
 	public double run() {
