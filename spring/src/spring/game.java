@@ -8,12 +8,11 @@ public class game {
 		// TODO Auto-generated method stub
 		System.out.println("ERDTFYGUHIJO");
 		initilize();
-		runGame();
 		reset();
 	}
 	
 	private void initilize() {
-		String[] names = {"Lion", "Panther", "Hippopottamus", "Cat", "Dog"};
+		String[] names = {"Lion", "Panther", "Hippo", "Cat", "Dog"};
 		int[] maxspeed = {45, 53, 37, 39, 41};	//tas * 0,1 for att bli ratt
 		int[] minspeed = {35, 37, 33, 33, 35};
 		double[] eatchance = { 0.13 , 0.23 , 0.02 , 0.03 , 0.09 };
@@ -26,7 +25,7 @@ public class game {
 			djuren[i].initilize(names[i], maxspeed[i], minspeed[i], eatchance[i]);
 		}
 		
-		for (djur djuret:djuren) {
+		for (djur djuret:djuren) {	
 			djuret.getTheName();
 		}
 	}

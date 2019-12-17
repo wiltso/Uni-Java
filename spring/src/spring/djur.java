@@ -7,7 +7,7 @@ public class djur {
 	private static String djurName;
 	private static double maxSpeed;
 	private static double minSpeed;
-	private double runingTotal = 0;
+	private double runningTotal = 0;
 	private static int eat;
 
 	public void initilize(String name, int maxspeed, int minspeed, double eatChance) {
@@ -23,12 +23,12 @@ public class djur {
 		}
 		else {
 			double ran = minSpeed + (maxSpeed - minSpeed) * rand.nextDouble();
-			runingTotal = runingTotal + ran;
-			return runingTotal;
+			runningTotal = runningTotal + ran;
+			return runningTotal;
 		}
 	}
 	public boolean won() {
-		if (runingTotal > 1000) {
+		if (runningTotal > 1000) {
 			return true;
 		}
 		else {
@@ -36,7 +36,7 @@ public class djur {
 		}
 	}
 	public void reset() {
-		runingTotal = 0;
+		runningTotal = 0;
 	}
 	public String getTheName() {
 		return "The " + djurName;
