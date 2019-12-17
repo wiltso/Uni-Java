@@ -2,7 +2,8 @@ package spring;
 
 public class game {
 	
-	djur[] djuren = new djur[5];
+	djur[] djuren = new djur[6];
+  
 	String format = "%1$-40s";
 	
 	public void runGame() {
@@ -18,10 +19,10 @@ public class game {
 	}
 	
 	private void initilize() {
-		String[] names = {"Lion", "Panther", "Hippo", "Cat", "Dog"};
-		double[] maxspeed = {4.5, 5.3, 3.7, 3.9, 4.1};	//tas * 0,1 for att bli ratt
-		double[] minspeed = {3.5, 3.7, 3.3, 3.3, 3.5};
-		double[] eatchance = { 0.13 , 0.23 , 0.02 , 0.03 , 0.09 };
+		String[] names = {"Lion", "Panther", "Hippo", "Cat", "Dog", "Bunny"};
+		double[] maxspeed = {4.5, 5.3, 3.7, 3.9, 4.1, 6.6};	//tas * 0,1 for att bli ratt
+		double[] minspeed = {3.5, 3.7, 3.3, 3.3, 3.5, 0.2};
+		double[] eatchance = { 0.13 , 0.23 , 0.02 , 0.03 , 0.09, 0.02 };
 		
 		for (int i = 0; i < djuren.length; i++) {
 			djuren[i] = new djur();
