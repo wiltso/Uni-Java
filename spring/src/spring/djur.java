@@ -7,8 +7,9 @@ public class djur {
 	static int minSpeed;
 	static float eat;
 
-	public void initilize() {
-		
+	public void initilize(String name, int maxspeed, int minspeed, float eatchance) {
+		djurtyp = name;
 		
 	}
+	public 
 }
