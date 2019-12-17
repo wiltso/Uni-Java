@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class djur {
 
-	private static String djurName;
-	private static double maxSpeed;
-	private static double minSpeed;
+	private String djurName;
+	private double maxSpeed;
+	private double minSpeed;
 	private double runningTotal = 0;
-	private static int eat;
+	private int eat;
 
 	public void initilize(String name, double maxspeed, double minspeed, double eatChance) {
 		djurName = name;
