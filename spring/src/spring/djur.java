@@ -10,11 +10,9 @@ public class djur {
 	private double runningTotal = 0;
 	private static int eat;
 
-	public void initilize(String name, int maxspeed, int minspeed, int eatChance) {
-		System.out.println(eatChance);
+	public void initilize(String name, int maxspeed, int minspeed, double eatChance) {
 		djurName = name;
-		eat = eatChance;
-		
+		eat = (int) (eatChance * 100);
 	}
 	public double run() {
 		Random rand = new Random(); 
@@ -28,13 +26,9 @@ public class djur {
 		}
 	}
 	public boolean won() {
-		if (runningTotal > 1000) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return runningTotal > 1000;
 	}
+
 	public void reset() {
 		runningTotal = 0;
 	}
