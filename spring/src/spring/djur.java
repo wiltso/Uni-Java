@@ -10,13 +10,15 @@ public class djur {
 	private double runningTotal = 0;
 	private static int eat;
 
-	public void initilize(String name, int maxspeed, int minspeed, double eatChance) {
+	public void initilize(String name, double maxspeed, double minspeed, double eatChance) {
 		djurName = name;
+		maxSpeed = maxspeed;
+		minSpeed = minspeed;
 		eat = (int) (eatChance * 100);
 	}
 	public double run() {
 		Random rand = new Random(); 
-		if (rand.nextInt(101) >= eat) {
+		if (rand.nextInt(101) <= eat) {
 			return -1.0;
 		}
 		else {
