@@ -13,6 +13,7 @@ public class game {
 			System.out.println();
 			won = run();
 		}
+		spelslut();
 		reset();
 	}
 	
@@ -55,5 +56,14 @@ public class game {
 			djuret.reset();
 		}
 	}
-
+	public void spelslut() {
+		String vinnare = "";
+		for (djur djuret:djuren) {
+			if (djuret.won()) {
+				vinnare = vinnare + djuret.getTheName() + " and ";
+			}
+		}
+		System.out.println();
+		System.out.println("The competition was won by " + vinnare.substring(0,vinnare.length()-5));
+	}
 }
