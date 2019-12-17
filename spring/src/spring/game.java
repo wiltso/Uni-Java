@@ -2,7 +2,7 @@ package spring;
 
 public class game {
 	
-	djur[] djuren = new djur[4];
+	djur[] djuren = new djur[5];
 	String format = "%1$-40s";
 	
 	public void runGame() {
@@ -40,7 +40,7 @@ public class game {
 		for (djur djuret: djuren) {
 			double runningTotal = djuret.run();
 			if (runningTotal == -1.0) {
-				System.out.format(format, "Eat");
+				System.out.format(format, "Eats");
 			}else {
 				System.out.format(format, runningTotal);
 			}
