@@ -3,10 +3,15 @@ package spring;
 import java.util.*;
 
 public class game {
+	
 	HashMap<Integer, String> unsortedPlayers = new HashMap<Integer, String>();
 	int round = 0;
+	
 	djur[] djuren = new djur[6];
   
+	/*
+	 * Created by William Lindholm
+	 */
 	String format = "%1$-20s";
 	
 	public void runGame() {
@@ -21,7 +26,9 @@ public class game {
 		reset();
 		 */
 	}
-	
+	/*
+	 * Created by William Lindholm
+	 */
 	public void reset() {
 		for (int i = 0; i < djuren.length; i++) {
 			djuren[i].reset();
@@ -43,7 +50,9 @@ public class game {
 			System.out.format(format, djuret.getTheName());			
 		}
 	}
-	
+	/*
+	 * Created by William Lindholm
+	 */
 	private boolean run() {
 		boolean someOneWon = false;
 		for (djur djuret: djuren) {

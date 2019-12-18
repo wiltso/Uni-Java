@@ -12,7 +12,7 @@ public class Gamestarter {
 		thegame.runGame();
 		
 		/*
-		 * For testing
+		 * For testing All testing things created by William Lindholm
 		thegame.initilize();
 		for(int i = 0; i<5000000;i++) {
 			thegame.runGame();
@@ -86,6 +86,21 @@ public class Gamestarter {
 		System.out.println("panther won: " + Integer.toString(panther));
 		System.out.println("bunny won: " + Integer.toString(bunny));
 		*/
+		/*
+		 * Results of testing
+		 * 1 winner: 4567712
+		   2 winner: 400209
+		   3 winner: 30456
+		   4 winner: 1576
+		   5 winner: 43
+		   6 winner: 4
+		   dog won: 818840
+		   cat won: 1340432
+	       hippo won: 100206
+		   lion won: 1483424
+		   panther won: 1517986
+		   bunny won: 205153
+		 */
 	}
 
 }

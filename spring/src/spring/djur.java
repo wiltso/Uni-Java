@@ -1,7 +1,9 @@
 package spring;
 
 import java.util.Random;
-
+/*
+ * Created William lindholm
+ */
 public class djur {
 
 	private String djurName;
