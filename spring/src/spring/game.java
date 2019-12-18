@@ -4,8 +4,12 @@ import java.util.*;
 
 public class game {
 	
-	HashMap<Integer, String> unsortedPlayers = new HashMap<Integer, String>();
-	int round = 0;
+	/*
+	 * for testing:
+	 * HashMap<Integer, String> unsortedPlayers = new HashMap<Integer, String>();
+	 * int round = 0;
+	 */
+	
 	
 	djur[] djuren = new djur[6];
   
@@ -13,7 +17,9 @@ public class game {
 	 * Created by William Lindholm
 	 */
 	String format = "%1$-20s";
-	
+	/*
+	 * by Kristina Causton
+	 */
 	public void runGame() {
 		initilize();
 		boolean won = false;
@@ -34,7 +40,9 @@ public class game {
 			djuren[i].reset();
 		}
 	}
-	
+	/*
+	 * By Kristina Causton
+	 */
 	public void initilize() {
 		String[] names = 	{"Lion", 	"Panther", 	"Hippo", 	"Cat", 	"Dog", 	"Bunny"};
 		double[] maxspeed = {4.5, 		5.3, 		3.7, 		3.9, 	4.1, 	6.6};
@@ -68,7 +76,9 @@ public class game {
 		}
 		return someOneWon;
 	}
-	
+	/*
+	 * By Kristina Causton
+	 */
 	public void spelslut() {
 		String vinnare = "";
 		for (djur djuret:djuren) {
@@ -76,8 +86,12 @@ public class game {
 				vinnare = vinnare + djuret.getTheName() + " and ";
 			}
 		}
-		unsortedPlayers.put(round, vinnare);
-		round = round + 1;
+		/*
+		 * for testing:
+		 * unsortedPlayers.put(round, vinnare);
+		 * round = round + 1;
+		 */
+		
 		System.out.println();
 		System.out.println("The competition was won by " + vinnare.substring(0,vinnare.length()-5));
 	}
