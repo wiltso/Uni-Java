@@ -2,7 +2,7 @@
 
 Sheard repositories for a university course whit my friend
 
-##Krisse how to use git
+## Krisse how to use git
 
 ### What to do after you you have change some thing
 
